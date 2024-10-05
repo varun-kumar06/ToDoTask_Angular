@@ -1,0 +1,19 @@
+.todo-list {
+    width: 300px;
+    margin: auto;
+  }
+  
+  /* src/app/todo-item/todo-item.component.css */
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    align-items: center;
+  }
+  
+  .todo-item.completed {
+    text-decoration: line-through;
+    color: grey;
+  }

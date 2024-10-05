@@ -1,0 +1,15 @@
+<div class="todo-item" [ngClass]="{ completed: task.completed }">
+    <div *ngIf="!isEditing">
+      <span>{{ task.title }}</span>
+      <button (click)="completeTask()" [disabled]="task.completed">
+        {{ task.completed ? 'Completed' : 'Complete' }}
+      </button>
+      <button (click)="toggleEdit()">Edit</button>
+      <button (click)="deleteTask()">Delete</button>
+    </div>
+    <div *ngIf="isEditing">
+      <input [(ngModel)]="editedTitle" />
+      <button (click)="saveEdit()">Save</button>
+      <button (click)="toggleEdit()">Cancel</button>
+    </div>
+  </div>

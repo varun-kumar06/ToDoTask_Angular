@@ -1,0 +1,14 @@
+<div class="todo-list">
+    <h1>Todo List</h1>
+    <input [(ngModel)]="newTaskTitle" placeholder="New task title" />
+    <button (click)="addTask()">Add Task</button>
+  
+    <div *ngFor="let task of tasks">
+      <app-form
+        [task]="task"
+        (markComplete)="markComplete(task.id)"
+        (delete)="deleteTask(task.id)"
+        (edit)="editTask(task.id, $event)"
+      ></app-form>
+    </div>
+  </div>
